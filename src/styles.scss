@@ -1,0 +1,111 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "sass:map";
+
+// The warn palette is optional (defaults to red).
+// $themeLuwfy-warn: mat-palette($mat-red);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+//pallete color
+
+$luwfyPalette: (
+  50: #ffffff,
+  100: #333333,
+  200: #b2b2b2,
+  300: #fcae1b,
+  400: #ff6988,
+  500: #5282c1,
+  //600: #4072b4,
+    // 700: #38649d,
+    // 800: #305687,
+    // 900: #284770,
+    // A100: #ffffff,
+    // A200: #dde6f3,
+    //A400: #6992c9,
+    // A700: #38649d,
+    contrast:
+    (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: $black-87-opacity,
+      A200: $black-87-opacity,
+      A400: $black-87-opacity,
+      A700: white,
+    ),
+);
+//$button-text: "Poppins", "sans-/serif" !important;
+
+//varaible
+$shape: (
+  "border-radius": 10px,
+);
+
+$themeLuwfy-light-primary: mat-palette($luwfyPalette, 300);
+$themeLuwfy-light-accent: mat-palette($luwfyPalette, 500);
+$themeLuwfy-light-warn: mat-palette($luwfyPalette, 400);
+$themeLuwfy-light-default: mat-palette($luwfyPalette, 400);
+
+$themeLuwfy-theme-light: mat-light-theme(
+  $themeLuwfy-light-primary,
+  $themeLuwfy-light-accent,
+  $themeLuwfy-light-warn
+);
+
+$themeLuwfy-dark-primary: mat-palette($luwfyPalette, 400);
+$themeLuwfy-dark-accent: mat-palette($luwfyPalette, 300);
+$themeLuwfy-dark-warn: mat-palette($luwfyPalette, 400);
+
+$themeLuwfy-theme-dark: mat-dark-theme(
+  $themeLuwfy-dark-primary,
+  $themeLuwfy-dark-accent,
+  $themeLuwfy-dark-warn
+);
+
+//config per componenty
+button {
+  border-radius: map.get($shape, "border-radius") !important;
+}
+button:hover {
+  opacity: 0.8 !important;
+}
+.mat-form-field-underline {
+  background-color: #fcae1b !important;
+}
+
+// .mat-radio-button.mat-accent
+//   > label
+//   > .mat-radio-container
+//   > mat-radio-outer-circle {
+//   background: "black";
+// }
+
+// .button.mat-primary {
+//   border-color: mat-palette($bv-brand, 400);
+// }
+
+/* You can add global styles to this file, and also import other style files */
+
+@include angular-material-theme($themeLuwfy-theme-light);
+
+.unicorn-dark-theme {
+  @include angular-material-theme($themeLuwfy-theme-dark);
+}
+
+@import "~@angular/material/_theming.scss";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
