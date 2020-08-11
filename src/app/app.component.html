@@ -1,3 +1,33 @@
+TODO ADD
+
+
+<section>
+  <div class="example-label">FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+          <mat-icon>bookmark</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab disabled aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 <p>
   <mat-form-field appearance="legacy">
     <mat-label>Legacy form field</mat-label>
@@ -22,16 +52,133 @@
   </p>
 </div>
 
+<div>
+  BUTTON TOGGLE
+  <div>
+    <mat-button-toggle>Underline</mat-button-toggle>
+  </div>
+</div>
+
+<div>
+  CARD
+  <mat-card>Simple card</mat-card>
+</div>
+
+<div>
+  DATEPICKER
+  <!-- <mat-form-field color="accent" appearance="fill">
+    <mat-label>Custom calendar color</mat-label>
+    <input matInput [matDatepicker]="picker2">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+  </mat-form-field> -->
+</div>
+
+
+<div>
+  MAT DIVIDER
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+</div>
+
+<div>
+  MENU
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+</div>
+
+
+<div>
+  PAGINATOR
+</div>
+
+<div>
+  PROGRESS BAR
+  <div>
+    BUFFER
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+  </div>
+
+  <div>
+    Determinate
+    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  </div>
+
+
+</div>
+
+<div>
+  PROGRESS SPINNER
+  <mat-spinner></mat-spinner>
+</div>
+
+<div>
+  SELECT
+</div>
+
+<div>
+  SIDENAV
+</div>
+
+<div>
+  SNACKBAR
+</div>
+
+<div>
+  TABLE
+</div>
+
+
+<div>
+
+  TABS
+
+
+</div>
+
+
+<div>
+  TOOLTIP
+</div>
+
+
+
+
+
+EXISTS
+
+
+
 
 
 <div>
   BUTTONS
 
   <div>
-    <button mat-button color="primary">Basic (Normal btn) </button>
-    <button color="primary" mat-raised-button>Raised ((Raised btn))</button>
-    <button mat-stroked-button>Stroke</button>
-    <button mat-flat-button>Flat</button>
+    <button mat-button>Defaut</button>
+    <button mat-button color="primary">primary</button>
+    <button mat-button color="warn">warn</button>
+    <button mat-button color="accent">accent</button>
   </div>
 
 </div>
@@ -41,11 +188,10 @@
 
   RADIOS
   <div>
-    <mat-radio-button color="primary" value="1">Default</mat-radio-button>
-    <mat-radio-button value="1">Primary</mat-radio-button>
-    <mat-radio-button value="1">Warn</mat-radio-button>
+    <mat-radio-button value="1">Default</mat-radio-button>
+    <mat-radio-button color="primary" value="1">Primary</mat-radio-button>
+    <mat-radio-button color="warn" value="1">Warn</mat-radio-button>
     <mat-radio-button value="1" [disabled]="true">Disabled</mat-radio-button>
-    <mat-radio-button value="1">Able</mat-radio-button>
   </div>
 
   <!-- <mat-radio-group aria-label="Select an option">
@@ -71,32 +217,24 @@
 <div>
   SLIDER
   <div>
+    <p>default</p>
     <mat-slider>Default</mat-slider>
-    <mat-slider>Primary</mat-slider>
-    <mat-slider>Warn</mat-slider>
-    <mat-slider>Off</mat-slider>
-    <mat-slider>Disabled</mat-slider>
+    <p>Primary</p>
+    <mat-slider color="primary">Primary</mat-slider>
+    <p>Warn</p>
+    <mat-slider color="warn">Warn</mat-slider>
+    <p>disable</p>
+    <mat-slider [disabled]="true">Disabled</mat-slider>
   </div>
 </div>
 
-<div>
-  RATING SLIDER
-  <div>
-    <mat-slider thumbLabel [displayWith]="1000" tickInterval="1000" min="1" max="100000">Default</mat-slider>
-    <mat-slider thumbLabel color="primary" [displayWith]="1000" tickInterval="1000" min="1" max="100000">
-    </mat-slider>
-    <mat-slider thumbLabel [displayWith]="1000" tickInterval="1000" min="1" max="100000">Warn</mat-slider>
-    <mat-slider thumbLabel [displayWith]="1000" tickInterval="1000" min="1" max="100000">Off</mat-slider>
-    <mat-slider thumbLabel [displayWith]="1000" tickInterval="1000" min="1" max="100000">Disabled</mat-slider>
-  </div>
-</div>
+
 
 <div>
   CHECKBOX
   <div>
     <mat-checkbox> Default</mat-checkbox>
-    <mat-checkbox> Sucess</mat-checkbox>
-    <mat-checkbox> Primary</mat-checkbox>
+    <mat-checkbox color="primary"> Primary</mat-checkbox>
     <mat-checkbox> Warn</mat-checkbox>
     <mat-checkbox> Disabled</mat-checkbox>
 
