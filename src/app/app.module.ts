@@ -25,9 +25,22 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { InputsComponent } from './inputs/inputs.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TablesComponent } from './inputs/tables/tables.component';
+import { MatTableModule } from '@angular/material/table';
+import { TableExpandableRowsExample } from './inputs/collapsable-table/collapsable-table.component';
+import { TableBasicExample } from './inputs/multiselection-table/multiselection-table.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputsComponent,
+    TablesComponent,
+    TableExpandableRowsExample,
+    TableBasicExample
   ],
   imports: [
     BrowserModule,
@@ -54,7 +67,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatSelectModule,
     MatStepperModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatGridListModule,
+    MatTabsModule,
+    MatAutocompleteModule,
+    FormsModule, ReactiveFormsModule,
+    MatTableModule
+
+
+
 
 
 

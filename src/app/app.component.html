@@ -1,329 +1,329 @@
-TODO ADD
+TYPOGRAPHY
+
+<h1 class="mat-h1">Header 1</h1>
+<h2 class="mat-title">Header 2</h2>
+<h3 class="mat-h3">Header 3</h3>
+<h4 class="mat-h4">Subtitle</h4>
+<p class="mat-body">Subtitle 1 (Paragraph)</p>
+<p class="mat-body-2">Subtitle 2</p>
 
 
-<section>
-  <div class="example-label">FAB</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
-          <mat-icon>bookmark</mat-icon>
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
-          <mat-icon>home</mat-icon>
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab disabled aria-label="Example icon button with a heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-<p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Legacy form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <!-- <mat-hint>Hint</mat-hint> -->
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="standard">
-    <mat-label>Standard form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-
-<div>
-  BADGE
-  <p>
-    <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
-  </p>
-</div>
-
-<div>
-  BUTTON TOGGLE
-  <div>
-    <mat-button-toggle>Underline</mat-button-toggle>
-  </div>
-</div>
-
-<div>
-  CARD
-  <mat-card>Simple card</mat-card>
-</div>
-
-<div>
-  DATEPICKER
-  <!-- <mat-form-field color="accent" appearance="fill">
-    <mat-label>Custom calendar color</mat-label>
-    <input matInput [matDatepicker]="picker2">
-    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-    <mat-datepicker #picker2 color="primary"></mat-datepicker>
-  </mat-form-field> -->
-</div>
+<app-inputs></app-inputs>
 
 
-<div>
-  MAT DIVIDER
-  <mat-list>
-    <mat-list-item>Item 1</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 2</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Item 3</mat-list-item>
-  </mat-list>
-</div>
+SELECTION TABLE
+<app-tables></app-tables>
 
-<div>
-  MENU
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu>
-</div>
+COPLLAPSABLE TABLE
+<collapsable-table></collapsable-table>
+
+MULTISELECTION
+<multiselection-table></multiselection-table>
+
+<mat-grid-list cols="2">
+  <mat-grid-tile>
+    <div class="grid-tile-wrapper">
 
 
-<div>
-  PAGINATOR
-</div>
-
-<div>
-  PROGRESS BAR
-  <div>
-    BUFFER
-    <mat-progress-bar mode="buffer"></mat-progress-bar>
-  </div>
-
-  <div>
-    Determinate
-    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-  </div>
-
-
-</div>
-
-<div>
-  PROGRESS SPINNER
-  <mat-spinner></mat-spinner>
-</div>
-
-<div>
-  SELECT
-</div>
-
-<div>
-  SIDENAV
-</div>
-
-<div>
-  SNACKBAR
-</div>
-
-<div>
-  TABLE
-</div>
-
-
-<div>
-
-  TABS
-
-
-</div>
-
-
-<div>
-  TOOLTIP
-</div>
-
-
-
-
-
-EXISTS
-
-
-
-
-
-<div>
-  BUTTONS
-DEFAULT BUTTON
-  <div>
-    <button mat-button>Defaut</button>
-    <button mat-button color="primary">primary</button>
-    <button mat-button color="warn">warn</button>
-    <button mat-button color="accent">accent</button>
-    <button mat-button [disabled] ="true">disabled</button>
-  </div>
-
-  RAISED BUTTON
-  <div>
-    <div>
-      <button mat-raised-button>Defaut</button>
-      <button mat-raised-button color="primary">primary</button>
-      <button mat-raised-button color="warn">warn</button>
-      <button mat-raised-button color="accent">accent</button>
-      <button mat-raised-button [disabled]="true">disabled</button>
-    </div>
-  </div>
-
-
-  ICON BUTTON
-  <div>
-    <p>default</p>
-    <button mat-icon-button>
-      <mat-icon>home</mat-icon>
-    </button>
-
-    <p>primary</p>
-    <button mat-icon-button color ="primary">
-      <mat-icon>home</mat-icon>
-    </button>
-
-
-    <p>accent</p>
-    <button mat-icon-button color="accent">
-      <mat-icon>home</mat-icon>
-    </button>
-
-    <p>warn</p>
-    <button mat-icon-button color="warn">
-      <mat-icon>home</mat-icon>
-    </button>
-
-    <div>
-      RISED ICON BUTTON
+      <!-- BUTTONS LIST -->
       <div>
-        <p>Default</p>
-        <button mat-icon-button mat-raised-button>
-          <mat-icon>home</mat-icon>
-        </button>
-        <p>Primary</p>
-        <button mat-icon-button mat-raised-button color ="primary">
-          <mat-icon>home</mat-icon>
-        </button>
-        <p>Warn</p>
-        <button mat-icon-button mat-raised-button color ="warn">
-          <mat-icon>home</mat-icon>
-        </button>
-        <p>Accent</p>
-        <button mat-icon-button mat-raised-button color ="accent">
-          <mat-icon>home</mat-icon>
-        </button>
-      
-      
+        <h2>BUTTONS</h2>
+        <section>
+          <div class="example-label"> DEFAULT BUTTON </div>
+          <div class="example-button-row">
+            <div>
+              <button mat-button>Defaut</button>
+              <button mat-button color="primary">primary</button>
+              <button mat-button color="warn">warn</button>
+              <button mat-button color="accent">accent</button>
+              <button mat-button [disabled]="true">disabled</button>
+            </div>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label">RAISED</div>
+          <div class="example-button-row">
+            <button mat-raised-button>Defaut</button>
+            <button mat-raised-button color="primary">primary</button>
+            <button mat-raised-button color="warn">warn</button>
+            <button mat-raised-button color="accent">accent</button>
+            <button mat-raised-button [disabled]="true">disabled</button>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label">ICON BUTTON</div>
+          <div class="example-button-row">
+            <button mat-icon-button>
+              <mat-icon>home</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+              <mat-icon>home</mat-icon>
+            </button>
+
+
+            <button mat-icon-button color="accent">
+              <mat-icon>home</mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn">
+              <mat-icon>home</mat-icon>
+            </button>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label"> RISED ICON BUTTON </div>
+          <div class="example-button-row">
+            <button mat-icon-button mat-raised-button>
+              <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button mat-raised-button color="primary">
+              <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button mat-raised-button color="accent">
+              <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button mat-raised-button color="warn">
+              <mat-icon>home</mat-icon>
+            </button>
+
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label">FAB</div>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-fab color="default">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-fab color="primary">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-fab color="accent">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-fab color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+        <section>
+          <div class="example-label">FAB-mini</div>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-mini-fab color="default">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-mini-fab color="primary">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-mini-fab color="accent">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-mini-fab color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label">FLAT BUTTON</div>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-flat-button>Default</button>
+              <button mat-flat-button color="primary">Primary</button>
+              <button mat-flat-button color="accent">Accent</button>
+              <button mat-flat-button color="warn">Warn</button>
+            </div>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
+
+        <section>
+          <div class="example-label">FLAT ICON BUTTON</div>
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <button mat-flat-button>
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-flat-button color="primary">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-flat-button color="accent">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-flat-button color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+        <mat-divider></mat-divider>
       </div>
 
+      <!-- RADIOS LIST -->
+      <div class="group-wrapper">
+        <h2>RADIOS</h2>
+        <div class="select-example">
+          <mat-radio-button value="1">Default</mat-radio-button>
+          <mat-radio-button color="primary" value="2">Primary</mat-radio-button>
+          <mat-radio-button color="warn" value="3">Warn</mat-radio-button>
+          <mat-radio-button value="4" [disabled]="true">Disabled</mat-radio-button>
+        </div>
+      </div>
+
+
+      <!-- SLIDE TOOGLE LIST -->
+      <div class="group-wrapper">
+        <h2> SLIDE TOOGLE </h2>
+        <div class="select-example">
+          <mat-slide-toggle>Default</mat-slide-toggle>
+          <mat-slide-toggle color="primary">Primary</mat-slide-toggle>
+          <mat-slide-toggle color="warn">Warn</mat-slide-toggle>
+          <mat-slide-toggle [disabled]="true">Disabled</mat-slide-toggle>
+        </div>
+
+      </div>
+
+      <!-- SLIDER -->
+      <div class="group-wrapper">
+        <h2>SLIDER</h2>
+        <div class="select-example">
+          <p>default</p>
+          <mat-slider>Default</mat-slider>
+          <p>Primary</p>
+          <mat-slider color="primary">Primary</mat-slider>
+          <p>Warn</p>
+          <mat-slider color="warn">Warn</mat-slider>
+        </div>
+      </div>
+
+
+
+
+
+      <!--  CHECKBOX -->
+      <div class="group-wrapper">
+        <h2> CHECKBOX</h2>
+        <div class="select-example">
+          <mat-checkbox> Default</mat-checkbox>
+          <mat-checkbox color="primary"> Primary</mat-checkbox>
+          <mat-checkbox color="warn">Warn</mat-checkbox>
+        </div>
+
+      </div>
+
+
+
+
+
+
     </div>
-
-<div>
-  FAB
-  <div>
-    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
+  </mat-grid-tile>
 
 
-
-</div>
-
-<div>
-  FAB-mini
-  <div>
-    <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
-</div>
+  <mat-grid-tile>
+    <!-- CARDS -->
+    <div class="grid-tile-wrapper">
+      <div class="group-wrapper">
+        <h2> CARDS</h2>
+        <div class="select-example">
+          <mat-card>
+            <h2>Title</h2>
 
 
 
-
-  </div>
-</div>
-
-
-<div>
-
-  RADIOS
-  <div>
-    <mat-radio-button value="1">Default</mat-radio-button>
-    <mat-radio-button color="primary" value="1">Primary</mat-radio-button>
-    <mat-radio-button color="warn" value="1">Warn</mat-radio-button>
-    <mat-radio-button value="1" [disabled]="true">Disabled</mat-radio-button>
-  </div>
-
-  <!-- <mat-radio-group aria-label="Select an option">
-    <mat-radio-button value="1">Option 1</mat-radio-button>
-    <mat-radio-button value="2">Option 2</mat-radio-button>
-  </mat-radio-group> -->
-</div>
+            Default
+            <button mat-button color="accent">Button</button>
+            <button mat-flat-button>Button</button>
+          </mat-card>
 
 
-<div>
-  SLIDE TOOGLE
-  <div>
-    <mat-slide-toggle>Default</mat-slide-toggle>
-    <mat-slide-toggle color="primary">Primary</mat-slide-toggle>
-    <mat-slide-toggle color="warn">Warn</mat-slide-toggle>
-    <mat-slide-toggle>Off</mat-slide-toggle>
-    <mat-slide-toggle [disabled]="true">Disabled</mat-slide-toggle>
-  </div>
+          <mat-card color="primary">Primary</mat-card>
+          <mat-card color="warn">Warn</mat-card>
+        </div>
+      </div>
 
-</div>
+      <!-- TABS -->
+      <div class="grid-tile-wrapper">
+        <div class="group-wrapper">
+          <h1>TABS</h1>
+          <mat-tab-group>
+            <mat-tab label="First"> Content 1 </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3 </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
 
-
-<div>
-  SLIDER
-  <div>
-    <p>default</p>
-    <mat-slider>Default</mat-slider>
-    <p>Primary</p>
-    <mat-slider color="primary">Primary</mat-slider>
-    <p>Warn</p>
-    <mat-slider color="warn">Warn</mat-slider>
-    <p>disable</p>
-    <mat-slider [disabled]="true">Disabled</mat-slider>
-  </div>
-</div>
+      <!-- EXPANSION PANEL -->
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              This is the expansion title
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
 
 
 
-<div>
-  CHECKBOX
-  <div>
-    <mat-checkbox> Default</mat-checkbox>
-    <mat-checkbox color="primary"> Primary</mat-checkbox>
-    <mat-checkbox> Warn</mat-checkbox>
-    <mat-checkbox> Disabled</mat-checkbox>
 
-  </div>
 
-</div>
+
+      <!-- DATEPICKER -->
+
+      <!-- DATEPICKER
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
+
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form> -->

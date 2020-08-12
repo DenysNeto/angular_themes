@@ -17,39 +17,38 @@
 //pallete color
 
 $luwfyPalette: (
-  50: #ffffff,
-  100: #333333,
+  50: #fcae1b,
+  100: #fcae1b,
   200: #b2b2b2,
   300: #fcae1b,
   400: #ff6988,
   500: #333333,
-  //600: #4072b4,
-    // 700: #38649d,
-    // 800: #305687,
-    // 900: #284770,
-    // A100: #ffffff,
-    // A200: #dde6f3,
-    //A400: #6992c9,
-    // A700: #38649d,
-    contrast:
-    (
-      50: $black-87-opacity,
-      100: $black-87-opacity,
-      200: $black-87-opacity,
-      300: $black-87-opacity,
-      400: $black-87-opacity,
-      500: white,
-      600: white,
-      700: white,
-      800: white,
-      900: white,
-      A100: $black-87-opacity,
-      A200: $black-87-opacity,
-      A400: $black-87-opacity,
-      A700: white,
-    ),
+  600: #4072b4,
+  700: #38649d,
+  800: #f4f4f4,
+  900: #284770,
+  A100: #ffffff,
+  A200: #dde6f3,
+  A400: #6992c9,
+  A700: #38649d,
+  contrast: (
+    50: #ff6988,
+    100: #ff6988,
+    200: #ff6988,
+    300: #ff6988,
+    400: #ff6988,
+    500: #ff6988,
+    600: #ff6988,
+    700: #ff6988,
+    800: #ff6988,
+    900: #ff6988,
+    A100: #ff6988,
+    A200: #ff6988,
+    A400: #ff6988,
+    A700: white,
+  ),
 );
-$button-text: "Poppins", "sans-/serif" !important;
+$button-text: "Poppins", "sans-serif" !important;
 
 //varaible
 $shape: (
@@ -60,6 +59,7 @@ $themeLuwfy-light-primary: mat-palette($luwfyPalette, 50);
 $themeLuwfy-light-accent: mat-palette($luwfyPalette, 300);
 $themeLuwfy-light-warn: mat-palette($luwfyPalette, 400);
 $themeLuwfy-light-default: mat-palette($luwfyPalette, 400);
+$themeLuwfy-light-dark-color: mat-palette($luwfyPalette, 500);
 
 $themeLuwfy-theme-light: mat-light-theme(
   $themeLuwfy-light-primary,
@@ -90,80 +90,197 @@ button:hover {
 .mat-fab {
   border-radius: 50px !important;
 }
-.mat-primary {
+button.mat-primary {
   color: #fcae1b !important;
   border-color: #fcae1b !important;
   // border: 2px solid !important;
 }
 
-.mat-button.mat-button-base
-{
+button.mat-button.mat-button-base {
   border: 1px solid;
-
 }
 
+button.mat-mini-fab {
+  border-radius: 40px !important;
+  background-color: #fff;
+}
 
+button.mat-fab.mat-default {
+  background-color: #333333 !important;
+  color: #ffffff;
+}
+
+button.mat-fab.mat-primary {
+  background-color: #fff !important;
+}
+
+button.mat-mini-fab.mat-primary {
+  background-color: #fff !important;
+}
+
+button.mat-mini-fab.mat-default {
+  background-color: #333333 !important;
+  color: #ffffff;
+}
+
+button.mat-flat-button {
+  background-color: transparent !important;
+  font-weight: bold !important;
+}
+
+button.mat-flat-button.mat-accent {
+  color: #fcae1b !important;
+  background-color: #ffffff !important;
+}
+
+button.mat-flat-button.mat-primary {
+  background-color: transparent !important;
+}
+
+button.mat-flat-button.mat-warn {
+  color: #ff6988 !important;
+  background-color: #ffffff !important;
+}
+
+button.mat-flat-button.mat-primary:hover {
+  background-color: #ffffff !important;
+}
+
+$luwfyTypography: mat-typography-config(
+  $font-family: "Poppins,  sans-serif",
+  $headline: mat-typography-level(60pt, 60pt, 700),
+  $title: mat-typography-level(50pt, 50pt, 600),
+  $subheading-2: mat-typography-level(16px, 16px, 600),
+  $subheading-1: mat-typography-level(20pt),
+  $button: mat-typography-level(14px),
+  $body-1: mat-typography-level(12pt),
+  $caption: mat-typography-level(14pt),
+);
+$color-red: #ff0000;
+
+.mat-tab-label-active {
+  color: map.get($luwfyPalette, 50) !important;
+}
+
+.mat-table {
+  border: 0px solid transparent;
+  border-radius: 30px;
+}
+
+.mat-header-row {
+  background-color: map.get($luwfyPalette, 500) !important;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.mat-header-cell {
+  color: map.get($luwfyPalette, 50) !important;
+}
+
+.mat-row:hover {
+  background-color: map.get($luwfyPalette, 800) !important;
+}
+
+.mat-row:last-child {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.mat-card {
+  background-color: map.get($luwfyPalette, 800) !important;
+  border-radius: 20px !important;
+}
+
+.mat-row.hovered {
+  background: #eee;
+}
+
+.mat-row.highlighted {
+  background: map.get($luwfyPalette, 50) !important;
+}
+
+.highlightTableColor {
+  background-color: map.get($luwfyPalette, 50) !important;
+}
+
+@include angular-material-typography($luwfyTypography);
+@include mat-core($luwfyTypography);
 // .mat-button.mat-button-base:hover{
-//   // background-color : #1c1c1c;  
+//   // background-color : #1c1c1c;
 // }
 
-.mat-accent {
-  background-color: #fcae1b !important;
+button.mat-accent {
+  background-color: #fcae1b;
   color: #ffffff !important;
 }
-.mat-primary:hover{
-  background-color: #FEEFD1 !important;
-  color: #FCAE1B !important;
+
+button.mat-primary:hover {
+  background-color: #feefd1 !important;
+  color: #fcae1b !important;
 }
 
-button.mat-icon-button{
-  border:1px solid;
+button.mat-icon-button {
+  border: 1px solid;
 }
 
-button.mat-icon-button:hover{
+button.mat-icon-button:hover {
   background-color: #c1c1c1;
 }
 
-button.mat-icon-button.mat-raised-button
-{
-border: none;
-
+button.mat-icon-button.mat-raised-button {
+  border: none;
 }
 
-
-
-
-
-
-button.mat-icon-button.mat-primary{
-  border : 1px solid ;
-  border-color: #FCAE1B;
+button.mat-icon-button.mat-primary {
+  border: 1px solid;
+  border-color: #fcae1b;
 
   //border-radius : 10px;
-
 }
 
-.mat-raised-button.mat-primary
-{
-  border-color: #FCAE1B !important;
-  border: 1px solid
+button.mat-raised-button.mat-primary {
+  border-color: #fcae1b !important;
+  background-color: #fff;
+  border: 1px solid;
 }
 
-.mat-warn{
-  background-color: #FF6988 !important;
+button.mat-warn {
+  background-color: #ff6988 !important;
   color: #ffffff !important;
 }
 
-// .mat-radio-button.mat-accent
-//   > label
-//   > .mat-radio-container
-//   > mat-radio-outer-circle {
-//   background: "black";
-// }
+.mat-radio-button.mat-accent .mat-radio-inner-circle,
+.mat-radio-button.mat-accent
+  .mat-radio-ripple
+  .mat-ripple-element:not(.mat-radio-persistent-ripple),
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple,
+.mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #333333 !important;
+}
 
-// .button.mat-primary {
-//   border-color: mat-palette($bv-brand, 400);
-// }
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  background-color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
+  background-color: #ffffff !important;
+  border-color: #fcae1b !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #ffffff;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
+  background-color: rgba(252, 174, 27, 0.54) !important;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+  background-color: #fcae1b !important;
+}
+
+// #f4f4f4
 
 /* You can add global styles to this file, and also import other style files */
 
