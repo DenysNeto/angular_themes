@@ -173,14 +173,100 @@ EXISTS
 
 <div>
   BUTTONS
-
+DEFAULT BUTTON
   <div>
     <button mat-button>Defaut</button>
     <button mat-button color="primary">primary</button>
     <button mat-button color="warn">warn</button>
     <button mat-button color="accent">accent</button>
+    <button mat-button [disabled] ="true">disabled</button>
   </div>
 
+  RAISED BUTTON
+  <div>
+    <div>
+      <button mat-raised-button>Defaut</button>
+      <button mat-raised-button color="primary">primary</button>
+      <button mat-raised-button color="warn">warn</button>
+      <button mat-raised-button color="accent">accent</button>
+      <button mat-raised-button [disabled]="true">disabled</button>
+    </div>
+  </div>
+
+
+  ICON BUTTON
+  <div>
+    <p>default</p>
+    <button mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <p>primary</p>
+    <button mat-icon-button color ="primary">
+      <mat-icon>home</mat-icon>
+    </button>
+
+
+    <p>accent</p>
+    <button mat-icon-button color="accent">
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <p>warn</p>
+    <button mat-icon-button color="warn">
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <div>
+      RISED ICON BUTTON
+      <div>
+        <p>Default</p>
+        <button mat-icon-button mat-raised-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        <p>Primary</p>
+        <button mat-icon-button mat-raised-button color ="primary">
+          <mat-icon>home</mat-icon>
+        </button>
+        <p>Warn</p>
+        <button mat-icon-button mat-raised-button color ="warn">
+          <mat-icon>home</mat-icon>
+        </button>
+        <p>Accent</p>
+        <button mat-icon-button mat-raised-button color ="accent">
+          <mat-icon>home</mat-icon>
+        </button>
+      
+      
+      </div>
+
+    </div>
+
+<div>
+  FAB
+  <div>
+    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+
+
+</div>
+
+<div>
+  FAB-mini
+  <div>
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+
+
+
+
+  </div>
 </div>
 
 

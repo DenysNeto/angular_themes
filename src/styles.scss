@@ -93,10 +93,64 @@ button:hover {
 .mat-primary {
   color: #fcae1b !important;
   border-color: #fcae1b !important;
-  border: 2px solid !important;
+  // border: 2px solid !important;
 }
+
+.mat-button.mat-button-base
+{
+  border: 1px solid;
+
+}
+
+
+// .mat-button.mat-button-base:hover{
+//   // background-color : #1c1c1c;  
+// }
+
 .mat-accent {
   background-color: #fcae1b !important;
+  color: #ffffff !important;
+}
+.mat-primary:hover{
+  background-color: #FEEFD1 !important;
+  color: #FCAE1B !important;
+}
+
+button.mat-icon-button{
+  border:1px solid;
+}
+
+button.mat-icon-button:hover{
+  background-color: #c1c1c1;
+}
+
+button.mat-icon-button.mat-raised-button
+{
+border: none;
+
+}
+
+
+
+
+
+
+button.mat-icon-button.mat-primary{
+  border : 1px solid ;
+  border-color: #FCAE1B;
+
+  //border-radius : 10px;
+
+}
+
+.mat-raised-button.mat-primary
+{
+  border-color: #FCAE1B !important;
+  border: 1px solid
+}
+
+.mat-warn{
+  background-color: #FF6988 !important;
   color: #ffffff !important;
 }
 
