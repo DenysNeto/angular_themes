@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatChipsModule} from '@angular/material/chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -34,19 +36,25 @@ import { TablesComponent } from './inputs/tables/tables.component';
 import { MatTableModule } from '@angular/material/table';
 import { TableExpandableRowsExample } from './inputs/collapsable-table/collapsable-table.component';
 import { TableBasicExample } from './inputs/multiselection-table/multiselection-table.component';
+import { DatpickerComponent } from './inputs/datpicker/datpicker.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { DialogOverviewExampleDialog } from './dialog/dialog.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     InputsComponent,
     TablesComponent,
     TableExpandableRowsExample,
-    TableBasicExample
-  ],
+    TableBasicExample,
+    DatpickerComponent,
+    DialogOverviewExampleDialog
+   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatRadioModule,
+    MatNativeDateModule,
     MatSlideToggleModule,
     MatSliderModule,
     MatInputModule,
@@ -64,6 +72,7 @@ import { TableBasicExample } from './inputs/multiselection-table/multiselection-
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
     MatSelectModule,
     MatStepperModule,
     MatToolbarModule,
@@ -72,7 +81,8 @@ import { TableBasicExample } from './inputs/multiselection-table/multiselection-
     MatTabsModule,
     MatAutocompleteModule,
     FormsModule, ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatChipsModule
 
 
 

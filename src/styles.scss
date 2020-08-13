@@ -128,9 +128,21 @@ button.mat-flat-button {
   font-weight: bold !important;
 }
 
+.mat-calendar-body-cell-content .mat-calendar-body-today
+{
+background-color: map.get($luwfyPalette, 50) !important; 
+
+}
+
 button.mat-flat-button.mat-accent {
   color: #fcae1b !important;
   background-color: #ffffff !important;
+}
+
+.mat-chip{
+  background-color: transparent !important;
+  border: 1px solid !important;
+  border-color:  map.get($luwfyPalette, 50) !important; 
 }
 
 button.mat-flat-button.mat-primary {
